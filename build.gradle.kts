@@ -1,6 +1,8 @@
 plugins {
     `java-gradle-plugin`
     id("com.palantir.git-version") version "4.2.0"
+    `idea`
+    `eclipse`
     `maven-publish`
     id("com.diffplug.spotless") version "8.0.0"
     id("com.github.gmazzo.buildconfig") version "5.7.1"
@@ -118,7 +120,7 @@ spotless {
         removeUnusedImports()
         forbidWildcardImports()
         trimTrailingWhitespace()
-        eclipse("4.37.0").configFile("spotless.eclipseformat.xml")
+        eclipse("4.37").configFile("spotless.eclipseformat.xml")
     }
 }
 
@@ -235,4 +237,3 @@ publishing {
         }
     }
 }
-
